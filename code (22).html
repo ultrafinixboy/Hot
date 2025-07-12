@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOT ZONE - আপনার বিনোদনের কেন্দ্র</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #0f0f0f; color: #f1f1f1; }
+        .site-header { text-align: center; padding: 15px 20px; }
+        .site-title-container { display: flex; justify-content: center; align-items: center; gap: 15px; }
+        .site-title { font-family: 'Oswald', sans-serif; font-size: 3.5rem; font-weight: 700; color: #e50914; text-transform: uppercase; letter-spacing: 3px; text-shadow: 0 0 12px rgba(229, 9, 20, 0.6); }
+        .title-icon { font-size: 3rem; color: #e50914; text-shadow: 0 0 12px rgba(229, 9, 20, 0.6); }
+        .featured-video { width: 100%; margin-bottom: 30px; background-color: #000; }
+        .video-player-title { font-size: 1.4rem; font-weight: 500; padding: 15px 20px; background-color: #1a1a1a; text-align: center; }
+        .video-player-title:empty { display: none; }
+        .video-player-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-image: url('https://img.freepik.com/free-photo/movie-background-with-popcorn-3d-glasses_23-2150918231.jpg'); background-size: cover; background-position: center; }
+        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 10; transition: opacity 0.3s ease; }
+        .play-button { width: 80px; height: 80px; background-color: rgba(229, 9, 20, 0.8); border-radius: 50%; display: flex; justify-content: center; align-items: center; transition: transform 0.2s, background-color 0.2s; }
+        .play-button:hover { transform: scale(1.1); background-color: rgba(229, 9, 20, 1); }
+        .play-button::after { content: ''; display: block; width: 0; height: 0; border-style: solid; border-width: 20px 0 20px 35px; border-color: transparent transparent transparent #ffffff; margin-left: 5px; }
+        .video-player-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: none; }
+        .content-container { max-width: 1400px; margin: 0 auto; padding: 0 20px 40px; }
+        .section-title { font-size: 1.8rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #333; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .video-card { background-color: #212121; border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .video-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); }
+        .video-card .thumbnail img { width: 100%; height: auto; display: block; }
+        .video-card .video-info { padding: 12px; }
+        .video-card .video-title { font-size: 1rem; font-weight: 500; line-height: 1.4; color: #f1f1f1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="site-title-container">
+            <i class="fas fa-lips title-icon"></i> 
+            <h1 class="site-title">HOT ZONE</h1>
+        </div>
+    </header>
+
+    <section class="featured-video">
+        <h2 id="main-video-title" class="video-player-title"></h2>
+        <div id="player-wrapper" class="video-player-wrapper">
+            <div id="video-overlay" class="video-overlay">
+                <div class="play-button"></div>
+            </div>
+            <iframe id="main-video-player" src="" data-initial-src="https://fr.xvideos.com/embedframe/ucmootbc58c" frameborder="0" scrolling="no" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <div class="content-container">
+        <section class="more-videos">
+            <h2 class="section-title">More Videos</h2>
+            <div class="video-grid">
+                
+                <!-- ব্যবহারকারীর দেওয়া নতুন ভিডিও কার্ডগুলো এখানে যোগ করা হলো -->
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ufdeoov7af4" data-title="New Hot Clip 1"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+1" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 1</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ukfhabm13d7" data-title="New Hot Clip 2"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+2" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 2</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/uklakov8711" data-title="New Hot Clip 3"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+3" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 3</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/eeehhv9d87" data-title="New Hot Clip 4"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+4" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 4</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/khpeuvm7dfc" data-title="New Hot Clip 5"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+5" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 5</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/kpdaiefa4e2" data-title="New Hot Clip 6"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+6" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 6</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/kahctik8e12" data-title="New Hot Clip 7"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+7" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 7</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/kumkcmh3bb2" data-title="New Hot Clip 8"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+8" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 8</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ieuiftvd873" data-title="New Hot Clip 9"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+9" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 9</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ihfkfpd9249" data-title="New Hot Clip 10"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+10" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 10</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/iafooboefd6" data-title="New Hot Clip 11"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+11" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 11</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/kbbadhd3c10" data-title="New Hot Clip 12"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+12" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 12</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/kihkabh0ee9" data-title="New Hot Clip 13"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+13" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 13</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/khivdoo099a" data-title="New Hot Clip 14"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+14" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 14</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ieekvlhb219" data-title="New Hot Clip 15"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+15" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 15</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/iepatvd52c8" data-title="New Hot Clip 16"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+16" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 16</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/idludbfde75" data-title="New Hot Clip 17"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+17" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 17</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ukabbvbd94e" data-title="New Hot Clip 18"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+18" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 18</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/ohcuduk3629" data-title="New Hot Clip 19"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+19" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 19</p></div></div>
+                <div class="video-card" data-embed-src="https://fr.xvideos.com/embedframe/otfbeif5058" data-title="New Hot Clip 20"><div class="thumbnail"><img src="https://placehold.co/400x225/e50914/ffffff?text=Hot+Clip+20" alt="Thumbnail"></div><div class="video-info"><p class="video-title">New Hot Clip 20</p></div></div>
+
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainVideoPlayer = document.getElementById('main-video-player');
+            const mainVideoTitle = document.getElementById('main-video-title');
+            const videoOverlay = document.getElementById('video-overlay');
+            const videoCards = document.querySelectorAll('.video-card');
+
+            function playVideo(src, title) {
+                if (src && title) {
+                    mainVideoPlayer.src = src;
+                    mainVideoTitle.textContent = title;
+                    mainVideoPlayer.style.display = 'block';
+                    videoOverlay.style.display = 'none';
+                    window.scrollTo({ top: mainVideoPlayer.offsetTop - 80, behavior: 'smooth' });
+                }
+            }
+
+            videoOverlay.addEventListener('click', function() {
+                const initialSrc = mainVideoPlayer.dataset.initialSrc + '?autoplay=1';
+                playVideo(initialSrc, "Now Playing...");
+            });
+
+            videoCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const embedSrc = this.dataset.embedSrc;
+                    const videoTitle = this.dataset.title;
+                    playVideo(embedSrc, videoTitle);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
